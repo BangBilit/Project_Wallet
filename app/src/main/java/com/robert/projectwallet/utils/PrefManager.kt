@@ -8,13 +8,13 @@ import org.json.JSONArray
 import org.json.JSONObject
 
 class PrefManager(context: Context) {
-    private val prefs: SharedPreferences = context.getSharedPreferences("dataSP", Context.MODE_PRIVATE)
-
     companion object {
-        private const val PREF_NAME = "project_wallet_prefs"
+        private const val PREF_NAME = "dataSP"
         private const val KEY_CATEGORIES = "key_categories"
         private const val KEY_TRANSACTIONS = "key_transactions"
     }
+
+    private val prefs: SharedPreferences = context.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE)
 
     init {
         // Data coba coba

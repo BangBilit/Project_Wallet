@@ -3,7 +3,6 @@ package com.robert.projectwallet
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
-import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -29,11 +28,11 @@ class MainActivity : AppCompatActivity() {
         }
 
         btnIncome.setOnClickListener {
-            Toast.makeText(this, "Fitur Pemasukan (No. 3) akan segera dikerjakan berikutnya!", Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this, IncomeActivity::class.java))
         }
 
         btnExpense.setOnClickListener {
-            Toast.makeText(this, "Fitur Pengeluaran (No. 4) akan segera dikerjakan berikutnya!", Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this, ExpenseActivity::class.java))
         }
     }
 }
